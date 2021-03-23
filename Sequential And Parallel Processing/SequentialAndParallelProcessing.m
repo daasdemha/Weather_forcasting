@@ -2,7 +2,9 @@ function SequentialAndParallelProcessing
 %% 0: Prepration before running code
 clear all
 close all
-ElementsToGoThrough = [100,250]; % The size of data to process
+
+ElementsToGoThrough = [123]; % The size of data to process
+
 ProcessorsToProcessFrom = [1,2]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
 % create new log file, 'w' replaces the file if present.
@@ -45,7 +47,7 @@ NumLon = 700;
 %% 3: Pre-allocate output array memory
 % the '-4' value is due to the analysis method resulting in fewer output
 % values than the input array.
-NumLocations = (NumLon - 4) * (NumLat - 4);
+NumLocations = (NumLon - 2) * (NumLat - 2);
 EnsembleVectorPar = zeros(NumLocations, NumHours); % pre-allocate memory
 
 %% 4: Cycle through the hours and load all the models for each hour and record memory use
@@ -142,7 +144,7 @@ delete(gcp);
 
 %need to fix later
 %% 10: Reshape ensemble values to Lat, lon, hour format
-%%EnsembleVectorPar = reshape(EnsembleVectorPar, 696, 396, []);
+EnsembleVectorPar = reshape(EnsembleVectorPar, 698, 398, []);
 fprintf('Total processing time for %i workers = %.2f s\n', PoolSize, sum(T3));
 %add the current number of running processors and the current data being 
 %processed to the log file
@@ -173,43 +175,58 @@ end
 % Show two plots on different y-axes
 % first data processed used below
 str1 = string(ElementsToGoThrough(1));
-str2 = string(ElementsToGoThrough(2));
 
-Data1 = append('Data ',str1);
-Data2 = append('Data ',str2);
+if numel(ElementsToGoThrough) == 1 
+    figure(1)
+    yyaxis left
+    plot(x1Vals, y1Vals, '-bd')
+    xlabel('Number of Processors')
+    ylabel('Processing time (s)')
+    title('Processing time vs number of processors')
+    %Here the data is used from x1vals and y1Vals to plot a graph
+    %%Secound data entred processed and used below
+else
+    str2 = string(ElementsToGoThrough(2));
 
-figure(1)
-yyaxis left
-plot(x1Vals, y1Vals, '-bd')
-xlabel('Number of Processors')
-ylabel('Processing time (s)')
-title('Processing time vs number of processors')
-%Here the data is used from x1vals and y1Vals to plot a graph
-%%Secound data entred processed and used below
-figure(1)
-yyaxis right
-plot(x2Vals, y2Vals, '-rx')
-xlabel('Number of Processors')
-ylabel('Processing time (s)')
-title('Processing time vs number of processors')
+    Data1 = append('Data ',str1);
+    Data2 = append('Data ',str2);
+
+    figure(1)
+    yyaxis left
+    plot(x1Vals, y1Vals, '-bd')
+    xlabel('Number of Processors')
+    ylabel('Processing time (s)')
+    title('Processing time vs number of processors')
+    %Here the data is used from x1vals and y1Vals to plot a graph
+    %%Secound data entred processed and used below
+    figure(1)
+    yyaxis right
+    plot(x2Vals, y2Vals, '-rx')
+    xlabel('Number of Processors')
+    ylabel('Processing time (s)')
+    title('Processing time vs number of processors')
 
 
 
-legend(Data1, Data2);
+    legend(Data1, Data2);
 
-%% Show two plots on same y-axis
-%% Mean processing time
-y1MeanVals = y1Vals / ElementsToGoThrough(1);
-y2MeanVals = y2Vals / ElementsToGoThrough(2);
+    %% Show two plots on same y-axis
+    %% Mean processing time
+    y1MeanVals = y1Vals / ElementsToGoThrough(1);
+    y2MeanVals = y2Vals / ElementsToGoThrough(2);
 
-figure(2)
-plot(x1Vals, y1MeanVals, '-bd')
-hold on
-plot(x2Vals, y2MeanVals, '-rx')
-xlabel('Number of Processors')
-ylabel('Processing time (s)')
-title('Mean Processing time vs number of processors')
-legend(Data1, Data2);
+    figure(2)
+    plot(x1Vals, y1MeanVals, '-bd')
+    hold on
+    plot(x2Vals, y2MeanVals, '-rx')
+    xlabel('Number of Processors')
+    ylabel('Processing time (s)')
+    title('Mean Processing time vs number of processors')
+    legend(Data1, Data2);
+
+
+ 
+end
 
 end % end function
 
