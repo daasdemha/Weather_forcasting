@@ -1,5 +1,4 @@
 %% Script to examine NetCDF data formats and check for non-numeric values (chars only)
-
 %% Data to test 
 function TestText(FileName)% define our test file as function
 
@@ -39,6 +38,4 @@ else
     % Write to log file
     fprintf(LogID, 'All data is numeric in %s\n', FileName);
 end
-
-fclose(LogID);
 end
