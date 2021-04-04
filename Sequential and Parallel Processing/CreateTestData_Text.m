@@ -1,8 +1,5 @@
+function CreateTestData_Text(FileIn)
 %% Replaces one hours worth of data with empty strings
-clear all
-close all
-
-FileIn = '.\Model\o3_surface_20180701000000.nc';
 C = ncinfo(FileIn);
 VarNames = {C.Variables.Name};
 
@@ -37,3 +34,4 @@ for idx = 1:7
     
 end
 
+end

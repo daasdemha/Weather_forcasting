@@ -1,0 +1,63 @@
+Test recorded on: 04-Apr-2021 18:59:42
+
+Testing for Text
+Text variables present in ../Model/TestFileText.nc
+All data is numeric in ../Model/o3_surface_20180701000000.nc
+
+Testing for NaN
+Testing file ../Model/TestFileNaN.nc
+No Error Present in ../Model/TestFileNaN.nc  at hour 1
+No Error Present in ../Model/TestFileNaN.nc  at hour 2
+No Error Present in ../Model/TestFileNaN.nc  at hour 3
+No Error Present in ../Model/TestFileNaN.nc  at hour 4
+No Error Present in ../Model/TestFileNaN.nc  at hour 5
+No Error Present in ../Model/TestFileNaN.nc  at hour 6
+No Error Present in ../Model/TestFileNaN.nc  at hour 7
+No Error Present in ../Model/TestFileNaN.nc  at hour 8
+No Error Present in ../Model/TestFileNaN.nc  at hour 9
+No Error Present in ../Model/TestFileNaN.nc  at hour 10
+No Error Present in ../Model/TestFileNaN.nc  at hour 11
+
+NaN Error Present in  ../Model/TestFileNaN.nc at hour 12
+
+No Error Present in ../Model/TestFileNaN.nc  at hour 13
+No Error Present in ../Model/TestFileNaN.nc  at hour 14
+No Error Present in ../Model/TestFileNaN.nc  at hour 15
+No Error Present in ../Model/TestFileNaN.nc  at hour 16
+No Error Present in ../Model/TestFileNaN.nc  at hour 17
+No Error Present in ../Model/TestFileNaN.nc  at hour 18
+No Error Present in ../Model/TestFileNaN.nc  at hour 19
+No Error Present in ../Model/TestFileNaN.nc  at hour 20
+No Error Present in ../Model/TestFileNaN.nc  at hour 21
+No Error Present in ../Model/TestFileNaN.nc  at hour 22
+No Error Present in ../Model/TestFileNaN.nc  at hour 23
+No Error Present in ../Model/TestFileNaN.nc  at hour 24
+No Error Present in ../Model/TestFileNaN.nc  at hour 25
+
+Testing file ../Model/o3_surface_20180701000000.nc
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 1
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 2
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 3
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 4
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 5
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 6
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 7
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 8
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 9
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 10
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 11
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 12
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 13
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 14
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 15
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 16
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 17
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 18
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 19
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 20
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 21
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 22
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 23
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 24
+No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 25
+

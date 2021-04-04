@@ -1,6 +1,5 @@
 %% Parallel Analysis
-function[PoolSize] = ParallelPool(SelectedProcessor)
-PoolSize = SelectedProcessor ; % define the number of threads to use in parallel
+function ParallelPool(PoolSize)
 maxNumCompThreads(PoolSize); % ~~~ NEW LINE ADDED FOR MATLAB ONLINE ~~~
 if isempty(gcp('nocreate'))
     parpool('threads'); % ~~~ CHANGE TO CODE FOR MATLAB ONLINE ~~~

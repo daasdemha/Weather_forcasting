@@ -10,8 +10,8 @@ close all
 LogID = fopen('AnalysisLog.txt', 'a');
 fprintf(LogID,'Test recorded on: %s', datestr(now, 0)); %recording the date and time of the test.
 
-ElementsToGoThrough = [100, 200]; % The size of data to process
-ProcessorsToProcessFrom = [1,2]; % The number of processors used
+ElementsToGoThrough = [200, 1000]; % The size of data to process
+ProcessorsToProcessFrom = [1,2,3,4,5,6,7,8]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
 
 %% 0.1 Initilizing the values before making a graph
@@ -22,6 +22,24 @@ x2Vals = ProcessorsToProcessFrom;
 y1Vals = [];
 y2Vals = [];
 
+%% Creating Errors
+%Uncommnet the code below to create the text and NaN errors.
+%Text errors
+%FileIn = '../Model/o3_surface_20180701000000.nc';
+%CreateTestData_Text(FileIn)
+
+%NaN errors
+%OriginalFileName = '../Model/o3_surface_20180701000000.nc';
+%NewFileName = '../Model/TestFileNaN.nc';
+%CreateTestData_NaN(OriginalFileName, NewFileName)
+
+%% Error Testing
+
+FilesToBeTested = {'../Model/TestFileText.nc', '../Model/o3_surface_20180701000000.nc'};
+
+DataFilesToBeTested = {'../Model/TestFileNaN.nc', '../Model/o3_surface_20180701000000.nc'};
+
+AutomatedErrorTesting(FilesToBeTested, DataFilesToBeTested)
 %% 1: Load Data
 FileName = '../Model/o3_surface_20180701000000.nc';
 Contents = ncinfo(FileName);
@@ -62,7 +80,7 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
      
     %% Slecting current processor procseeing the data and the current data
     %%being processed
-    for SelectedProcessor = ProcessorsToProcessFrom %Selecting a sinlgle
+    for PoolSize = ProcessorsToProcessFrom %Selecting a sinlgle
         %processor at a time from a list of prossors entred by the user to
         %process the data.
     for SelectedElement = ElementsToGoThrough
@@ -72,7 +90,7 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
             T3 = 0; %Reseting T3
             
             %% 7: Create the parallel pool and attache files for use
-            [PoolSize] = ParallelPool(SelectedProcessor);
+            ParallelPool(PoolSize);
             
             %% 9: The Parallel and Sequential Processing
             T4 = toc;
@@ -92,6 +110,9 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
         %% 10: Reshape ensemble values to Lat, lon, hour format
         % Prints results and appends them to Log book 
         ReshapingAndResults(PoolSize, T3, LogID, SelectedElement, EnsembleVectorPar);
+        
+        
+     
         
         %% Appeding value's to y1VAl and y2Val.
         [y1Vals, y2Vals] = YaxisConstruct(ElementsToGoThrough, idxTime, SelectedElement, T3, y1Vals, y2Vals);

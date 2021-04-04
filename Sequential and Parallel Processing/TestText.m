@@ -1,6 +1,6 @@
 %% Script to examine NetCDF data formats and check for non-numeric values (chars only)
 %% Data to test 
-function TestText(FileName)% define our test file as function
+function TestText(LogID2, FileName)% define our test file as function
 
 %% Define plain text variable types
 DataTypes = {'NC_Byte', 'NC_Char', 'NC_Short', 'NC_Int', 'NC_Float', 'NC_Double'};
@@ -21,21 +21,15 @@ DataInFile = DataTypes(datatype);
 
 %% find character data types
 FindText = strcmp('NC_Char', DataInFile);
-
-%% Create and open log file
-% create new log file, 'w' replaces the file if present. To continually
-% append, use 'a'
-LogID = fopen('AnalysisLog.txt', 'a');
-
 %% print results
 fprintf('Testing file: %s\n', FileName)
 if any(FindText)
     fprintf('Error, text variables present:\n')
    % Write to log file
-    fprintf(LogID, 'Text variables present in %s\n', FileName);
+    fprintf(LogID2, 'Text variables present in %s\n', FileName);
 else
     fprintf('All data is numeric, continue analysis.\n')
     % Write to log file
-    fprintf(LogID, 'All data is numeric in %s\n', FileName);
+    fprintf(LogID2, 'All data is numeric in %s\n', FileName);
 end
 end

@@ -57,3 +57,5 @@ legend('Location','northwest');
 xlabel('Number of Processors'); 
 ylabel('Processing time (s)'); 
 legend('Our values','Average'); 
+
+

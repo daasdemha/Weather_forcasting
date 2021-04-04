@@ -49,3 +49,44 @@ Total processing time for 6 workers = 39.06 s in processing of first 10000 eleme
 Total processing time for 7 workers = 47.44 s in processing of first 10000 elements of Data
 Total processing time for 8 workers = 39.93 s in processing of first 10000 elements of Data
 
+Test recorded on: 31-Mar-2021 15:47:56
+Processing hour: 1
+Total processing time for 1 workers = 987.96 s in processing of first 69451 elements of Data
+Total processing time for 2 workers = 501.14 s in processing of first 69451 elements of Data
+Total processing time for 3 workers = 342.61 s in processing of first 69451 elements of Data
+Total processing time for 4 workers = 280.99 s in processing of first 69451 elements of Data
+Total processing time for 5 workers = 307.47 s in processing of first 69451 elements of Data
+Total processing time for 6 workers = 248.02 s in processing of first 69451 elements of Data
+Total processing time for 7 workers = 227.52 s in processing of first 69451 elements of Data
+Total processing time for 8 workers = 206.81 s in processing of first 69451 elements of Data
+
+Processing hour: 2
+Total processing time for 1 workers = 919.11 s in processing of first 69451 elements of Data
+Total processing time for 2 workers = 511.95 s in processing of first 69451 elements of Data
+Total processing time for 3 workers = 344.41 s in processing of first 69451 elements of Data
+Total processing time for 4 workers = 268.96 s in processing of first 69451 elements of Data
+Total processing time for 5 workers = 269.33 s in processing of first 69451 elements of Data
+Total processing time for 6 workers = 251.92 s in processing of first 69451 elements of Data
+Total processing time for 7 workers = 241.38 s in processing of first 69451 elements of Data
+Total processing time for 8 workers = 210.48 s in processing of first 69451 elements of Data
+
+Processing hour: 3
+Total processing time for 1 workers = 925.80 s in processing of first 69451 elements of Data
+Total processing time for 2 workers = 510.16 s in processing of first 69451 elements of Data
+Total processing time for 3 workers = 354.93 s in processing of first 69451 elements of Data
+Total processing time for 4 workers = 270.91 s in processing of first 69451 elements of Data
+Total processing time for 5 workers = 245.50 s in processing of first 69451 elements of Data
+Total processing time for 6 workers = 236.82 s in processing of first 69451 elements of Data
+Total processing time for 7 workers = 221.51 s in processing of first 69451 elements of Data
+Total processing time for 8 workers = 212.02 s in processing of first 69451 elements of Data
+
+Processing hour: 4
+Total processing time for 1 workers = 924.16 s in processing of first 69451 elements of Data
+Total processing time for 2 workers = 498.26 s in processing of first 69451 elements of Data
+Total processing time for 3 workers = 342.28 s in processing of first 69451 elements of Data
+Total processing time for 4 workers = 275.68 s in processing of first 69451 elements of Data
+Total processing time for 5 workers = 247.05 s in processing of first 69451 elements of Data
+Total processing time for 6 workers = 231.16 s in processing of first 69451 elements of Data
+Total processing time for 7 workers = 221.09 s in processing of first 69451 elements of Data
+Total processing time for 8 workers = 227.43 s in processing of first 69451 elements of Data
+

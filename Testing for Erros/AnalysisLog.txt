@@ -1,7 +1,0 @@
-Test recorded on: 27-Mar-2021 14:21:29
-Text variables present in ../Model/TestFileText.nc
-All data is numeric in ../Model/o3_surface_20180701000000.nc
-
-All data is numeric in ../Model/TestFileNaN.nc
-All data is numeric in ../Model/o3_surface_20180701000000.nc
-

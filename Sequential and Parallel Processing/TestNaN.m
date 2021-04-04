@@ -1,7 +1,9 @@
 %% Script to examine NetCDF data formats and check for NaN
 % Note, you would carry out this test each time you load data.
 % You should NOT test the whole file at the start
-function TestNaN(DataFileName)% define our test file as function
+function TestNaN(LogID2, DataFileName)% define our test file as function
+fprintf(LogID2,'Testing file %s', DataFileName);
+fprintf(LogID2,'\n');
 %% Test File with Errors
 NaNErrors = 0;
 %% Set file to test
@@ -29,15 +31,14 @@ for idxHour = 1:25
             idxHour, Contents.Variables(ErrorModel).Name)
         
         % Write to log file
-        fprintf(LogID, '%s: %s processing data hour %i\n', datestr(now, 0), 'NaN Error', idxHour);
+        fprintf(LogID2,'\n');
+        fprintf(LogID2, 'NaN Error Present in  %s at hour %i\n',DataFileName, idxHour);
+        fprintf(LogID2,'\n');
     else
         % write to log file
-        fprintf(LogID, '%s: %s processing data hour %i\n', datestr(now, 0), 'Success', idxHour);
-    end
-    
+        fprintf(LogID2, 'No Error Present in %s  at hour %i\n',DataFileName, idxHour);
+    end   
 end
-
 if ~NaNErrors
     fprintf('No errors!\n')
-end
 end

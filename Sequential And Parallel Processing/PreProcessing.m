@@ -4,5 +4,5 @@ function [Data2Process, LatLon] = PreProcessing(HourlyData, Lat, Lon)
 % ## This process is defined by the customer ##
 % If you want to know the details, please ask, but this is not required
 % for the module or assessment.
-[Data2Process, LatLon] = PrepareData(HourlyData, Lat, Lon);
+ [Data2Process, LatLon] = PrepareData(HourlyData, Lat, Lon);
 end
