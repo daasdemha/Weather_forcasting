@@ -35,11 +35,11 @@ y2Vals = [];
 
 %% Error Testing
 
-FilesToBeTested = {'../Model/TestFileText.nc', '../Model/o3_surface_20180701000000.nc'};
+TextFilesToBeTested = {'../Model/TestFileText.nc', '../Model/o3_surface_20180701000000.nc'};
 
-DataFilesToBeTested = {'../Model/TestFileNaN.nc', '../Model/o3_surface_20180701000000.nc'};
-
-AutomatedErrorTesting(FilesToBeTested, DataFilesToBeTested)
+NaNFilesToBeTested = {'../Model/TestFileNaN.nc', '../Model/o3_surface_20180701000000.nc'};
+%function to test for text and NaN errors.
+AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested)
 %% 1: Load Data
 FileName = '../Model/o3_surface_20180701000000.nc';
 Contents = ncinfo(FileName);
