@@ -10,10 +10,10 @@ close all
 LogID = fopen('AnalysisLog.txt', 'a');
 fprintf(LogID,'Test recorded on: %s', datestr(now, 0)); %recording the date and time of the test.
 
-ElementsToGoThrough = [200, 1000]; % The size of data to process
-ProcessorsToProcessFrom = [1,2,3,4,5,6,7,8]; % The number of processors used
+ElementsToGoThrough = [1]; % The size of data to process
+ProcessorsToProcessFrom = [1]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
-
+i = 1;
 %% 0.1 Initilizing the values before making a graph
 %The data entred in x1vals and y1Vals will be used to plot a graph.
 %The data will only include the only first two processor sizes.
@@ -21,27 +21,32 @@ x1Vals = ProcessorsToProcessFrom;
 x2Vals = ProcessorsToProcessFrom;
 y1Vals = [];
 y2Vals = [];
-
+FileName = '../Model/o3_surface_20180701000000.nc'; % file to process
 %% Creating Errors
-%Uncommnet the code below to create the text and NaN errors.
+
 %Text errors
-%FileIn = '../Model/o3_surface_20180701000000.nc';
-%CreateTestData_Text(FileIn)
+CreateTestData_Text(FileName)
+%'../Model/TestFileText.nc' is the file with text error data
 
 %NaN errors
-%OriginalFileName = '../Model/o3_surface_20180701000000.nc';
-%NewFileName = '../Model/TestFileNaN.nc';
-%CreateTestData_NaN(OriginalFileName, NewFileName)
+NewFileName = '../Model/TestFileNaN.nc';
+CreateTestData_NaN(FileName, NewFileName)
+
+%-9999 errors
+NewFileName9999 = '../Model/TestFile9999.nc';
+CreateTestData_9999(FileName, NewFileName9999)
 
 %% Error Testing
 
-TextFilesToBeTested = {'../Model/TestFileText.nc', '../Model/o3_surface_20180701000000.nc'};
+TextFilesToBeTested = {'../Model/TestFileText.nc', FileName};
 
-NaNFilesToBeTested = {'../Model/TestFileNaN.nc', '../Model/o3_surface_20180701000000.nc'};
+NaNFilesToBeTested = {'../Model/TestFileNaN.nc', FileName};
+
+FilesToBeTested9999 = {'../Model/TestFile9999.nc', FileName};
+
 %function to test for text and NaN errors.
-AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested)
+[SkipHours9999, SkipHoursNaN] = AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested, FilesToBeTested9999);
 %% 1: Load Data
-FileName = '../Model/o3_surface_20180701000000.nc';
 Contents = ncinfo(FileName);
 Lat = ncread(FileName, 'lat');
 Lon = ncread(FileName, 'lon');
@@ -80,10 +85,12 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
      
     %% Slecting current processor procseeing the data and the current data
     %%being processed
-    for PoolSize = ProcessorsToProcessFrom %Selecting a sinlgle
-        %processor at a time from a list of prossors entred by the user to
-        %process the data.
+    %processor at a time from a list of prossors entred by the user to
+    %process the data.
     for SelectedElement = ElementsToGoThrough
+        fprintf(LogID,'\nProcessing %i elements of Data\n', SelectedElement);
+    for PoolSize = ProcessorsToProcessFrom %Selecting a sinlgle
+
         
             %%Setting and reseting Values.
             EnsembleVectorPar = zeros(NumLocations, NumHours); % pre-allocate memory
@@ -94,15 +101,29 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
             
             %% 9: The Parallel and Sequential Processing
             T4 = toc;
-            
-            if SelectedElement == 1
-                [T3] = SequentialProcessing(idxTime, Data2Process,...
-    LatLon, RadLat, RadLon, RadO3, T4); % The Sequential processing!
 
-            else
-                [T3] = ParallelProcessing(SelectedElement, idxTime, Data2Process,...
-    LatLon, RadLat, RadLon, RadO3, T4); % The parallel processing!
+            if numel(SkipHoursNaN)>= i 
+                    if SkipHoursNaN(i) == idxTime
+                        continue
+                    end
+            elseif numel(SkipHours9999) >= i
+                    if SkipHours9999(i) == idxTime
+                        continue
+                    end
+            else              
+                    if SelectedElement == 1
+                        [T3] = SequentialProcessing(idxTime, Data2Process,...
+            LatLon, RadLat, RadLon, RadO3, T4); % The Sequential processing!
+
+                    else
+                        [T3] = ParallelProcessing(SelectedElement, idxTime, Data2Process,...
+            LatLon, RadLat, RadLon, RadO3, T4); % The parallel processing!
+                    end
+                    
             end
+
+   
+
             
         T2 = toc;
         delete(gcp);
@@ -115,11 +136,13 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
      
         
         %% Appeding value's to y1VAl and y2Val.
-        [y1Vals, y2Vals] = YaxisConstruct(ElementsToGoThrough, idxTime, SelectedElement, T3, y1Vals, y2Vals);
+        if idxTime == 1
+          [y1Vals, y2Vals] = YaxisConstruct(ElementsToGoThrough,SelectedElement, T3, y1Vals, y2Vals);
+        end
     
     end %end of Selected Element Loop
     end %end of Processor Loop
-    
+    i = i + 1;
 end %end of time loop
 
 fprintf(LogID,'\n');

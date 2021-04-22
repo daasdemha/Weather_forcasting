@@ -1,4 +1,4 @@
-Test recorded on: 04-Apr-2021 20:36:45
+Test recorded on: 22-Apr-2021 03:49:13
 
 Testing for Text
 Text variables present in ../Model/TestFileText.nc
@@ -6,59 +6,116 @@ All data is numeric in ../Model/o3_surface_20180701000000.nc
 
 Testing for NaN
 Testing file ../Model/TestFileNaN.nc
-No Error Present in ../Model/TestFileNaN.nc  at hour 1
-No Error Present in ../Model/TestFileNaN.nc  at hour 2
-No Error Present in ../Model/TestFileNaN.nc  at hour 3
-No Error Present in ../Model/TestFileNaN.nc  at hour 4
-No Error Present in ../Model/TestFileNaN.nc  at hour 5
-No Error Present in ../Model/TestFileNaN.nc  at hour 6
-No Error Present in ../Model/TestFileNaN.nc  at hour 7
-No Error Present in ../Model/TestFileNaN.nc  at hour 8
-No Error Present in ../Model/TestFileNaN.nc  at hour 9
-No Error Present in ../Model/TestFileNaN.nc  at hour 10
-No Error Present in ../Model/TestFileNaN.nc  at hour 11
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 1
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 2
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 3
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 4
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 5
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 6
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 7
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 8
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 9
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 10
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 11
 
 NaN Error Present in  ../Model/TestFileNaN.nc at hour 12
 
-No Error Present in ../Model/TestFileNaN.nc  at hour 13
-No Error Present in ../Model/TestFileNaN.nc  at hour 14
-No Error Present in ../Model/TestFileNaN.nc  at hour 15
-No Error Present in ../Model/TestFileNaN.nc  at hour 16
-No Error Present in ../Model/TestFileNaN.nc  at hour 17
-No Error Present in ../Model/TestFileNaN.nc  at hour 18
-No Error Present in ../Model/TestFileNaN.nc  at hour 19
-No Error Present in ../Model/TestFileNaN.nc  at hour 20
-No Error Present in ../Model/TestFileNaN.nc  at hour 21
-No Error Present in ../Model/TestFileNaN.nc  at hour 22
-No Error Present in ../Model/TestFileNaN.nc  at hour 23
-No Error Present in ../Model/TestFileNaN.nc  at hour 24
-No Error Present in ../Model/TestFileNaN.nc  at hour 25
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 13
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 14
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 15
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 16
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 17
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 18
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 19
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 20
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 21
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 22
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 23
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 24
+No NaN Error Present in ../Model/TestFileNaN.nc  at hour 25
 
 Testing file ../Model/o3_surface_20180701000000.nc
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 1
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 2
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 3
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 4
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 5
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 6
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 7
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 8
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 9
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 10
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 11
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 12
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 13
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 14
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 15
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 16
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 17
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 18
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 19
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 20
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 21
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 22
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 23
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 24
-No Error Present in ../Model/o3_surface_20180701000000.nc  at hour 25Test recorded on: 05-Apr-2021 20:26:27
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 1
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 2
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 3
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 4
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 5
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 6
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 7
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 8
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 9
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 10
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 11
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 12
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 13
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 14
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 15
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 16
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 17
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 18
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 19
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 20
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 21
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 22
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 23
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 24
+No NaN Error Present in ../Model/o3_surface_20180701000000.nc  at hour 25
 
-Testing for Text
+
+Testing for -9999
+Testing file ../Model/TestFile9999.nc
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 1
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 2
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 3
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 4
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 5
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 6
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 7
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 8
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 9
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 10
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 11
+
+-9999 Error Present in  ../Model/TestFile9999.nc at hour 12
+
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 13
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 14
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 15
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 16
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 17
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 18
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 19
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 20
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 21
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 22
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 23
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 24
+No -9999 Error Present in ../Model/TestFile9999.nc  at hour 25
+
+Testing file ../Model/o3_surface_20180701000000.nc
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 1
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 2
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 3
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 4
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 5
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 6
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 7
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 8
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 9
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 10
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 11
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 12
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 13
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 14
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 15
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 16
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 17
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 18
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 19
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 20
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 21
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 22
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 23
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 24
+No -9999 Error Present in ../Model/o3_surface_20180701000000.nc  at hour 25
+

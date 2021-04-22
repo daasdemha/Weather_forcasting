@@ -1,17 +1,17 @@
 %% Script to examine NetCDF data formats and check for NaN
 % Note, you would carry out this test each time you load data.
 % You should NOT test the whole file at the start
-function [SkipHoursNaN] = TestNaN(LogID2, DataFileName)% define our test file as function
+function [SkipHours9999] =  Test9999(LogID2, DataFileName)% define our test file as function
 fprintf(LogID2,'Testing file %s', DataFileName);
 fprintf(LogID2,'\n');
 %% Test File with Errors
-NaNErrors = 0;
+Errors9999 = 0;
 %% Set file to test
 Contents = ncinfo(DataFileName); % Store the file content information in a variable.
-
+SkipHours9999 = [];
 StartLat = 1;
 StartLon = 1;
-SkipHoursNaN = [];
+
 fprintf('Testing files: %s\n', DataFileName)
 for idxHour = 1:25
     
@@ -21,29 +21,27 @@ for idxHour = 1:25
     end
     
     % check for NaNs
-    if any(isnan(Data), 'All')
-        NaNErrors = 1;
+    if any(Data==-9999, 'All') 
+        Errors9999 = 1;
         %% display warning
-        fprintf('NaNs present\n')
-        ErrorModel = find(isnan(Data), 1, 'first');
+        fprintf('-9999 present\n')
         %% find first error:
-        fprintf('Analysis for hour %i is invalid, NaN errors recorded in model %s\n',...
-            idxHour, Contents.Variables(ErrorModel).Name)
+        fprintf('-9999 present during hour %i\n', idxHour)
         
         % Write to log file
         fprintf(LogID2,'\n');
-        fprintf(LogID2, 'NaN Error Present in  %s at hour %i\n',DataFileName, idxHour);
+        fprintf(LogID2, '-9999 Error Present in  %s at hour %i\n',DataFileName, idxHour);
         fprintf(LogID2,'\n');
         
         %% to remove the hour the error occured from the main code
         if strcmp(DataFileName,'../Model/o3_surface_20180701000000.nc')
-            SkipHoursNaN(end+1) = idxHour;
+            SkipHours9999(end+1) = idxHour;
         end
     else
         % write to log file
-        fprintf(LogID2, 'No NaN Error Present in %s  at hour %i\n',DataFileName, idxHour);
+        fprintf(LogID2, 'No -9999 Error Present in %s  at hour %i\n',DataFileName, idxHour);
     end   
 end
-if ~NaNErrors
+if ~Errors9999
     fprintf('No errors!\n')
 end

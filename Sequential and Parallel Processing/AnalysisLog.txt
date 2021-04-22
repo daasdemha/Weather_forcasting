@@ -1,5 +1,7 @@
 Test recorded on: 28-Mar-2021 15:06:39
 Processing hour: 1
+
+Processing 10000 elements of Data
 Total processing time for 1 workers = 124.75 s in processing of first 10000 elements of Data
 Total processing time for 2 workers = 67.15 s in processing of first 10000 elements of Data
 Total processing time for 3 workers = 47.76 s in processing of first 10000 elements of Data
@@ -10,6 +12,8 @@ Total processing time for 7 workers = 38.31 s in processing of first 10000 eleme
 Total processing time for 8 workers = 33.63 s in processing of first 10000 elements of Data
 
 Processing hour: 2
+
+Processing 10000 elements of Data
 Total processing time for 1 workers = 123.43 s in processing of first 10000 elements of Data
 Total processing time for 2 workers = 63.21 s in processing of first 10000 elements of Data
 Total processing time for 3 workers = 44.63 s in processing of first 10000 elements of Data
@@ -20,6 +24,8 @@ Total processing time for 7 workers = 31.99 s in processing of first 10000 eleme
 Total processing time for 8 workers = 33.03 s in processing of first 10000 elements of Data
 
 Processing hour: 3
+
+Processing 10000 elements of Data
 Total processing time for 1 workers = 120.79 s in processing of first 10000 elements of Data
 Total processing time for 2 workers = 64.70 s in processing of first 10000 elements of Data
 Total processing time for 3 workers = 49.60 s in processing of first 10000 elements of Data
@@ -30,6 +36,8 @@ Total processing time for 7 workers = 32.21 s in processing of first 10000 eleme
 Total processing time for 8 workers = 34.42 s in processing of first 10000 elements of Data
 
 Processing hour: 4
+
+Processing 10000 elements of Data
 Total processing time for 1 workers = 122.33 s in processing of first 10000 elements of Data
 Total processing time for 2 workers = 64.85 s in processing of first 10000 elements of Data
 Total processing time for 3 workers = 49.05 s in processing of first 10000 elements of Data
@@ -40,6 +48,8 @@ Total processing time for 7 workers = 33.20 s in processing of first 10000 eleme
 Total processing time for 8 workers = 34.39 s in processing of first 10000 elements of Data
 
 Processing hour: 5
+
+Processing 10000 elements of Data
 Total processing time for 1 workers = 121.52 s in processing of first 10000 elements of Data
 Total processing time for 2 workers = 63.71 s in processing of first 10000 elements of Data
 Total processing time for 3 workers = 47.95 s in processing of first 10000 elements of Data
@@ -51,6 +61,8 @@ Total processing time for 8 workers = 39.93 s in processing of first 10000 eleme
 
 Test recorded on: 31-Mar-2021 15:47:56
 Processing hour: 1
+
+Processing 69451 elements of Data
 Total processing time for 1 workers = 987.96 s in processing of first 69451 elements of Data
 Total processing time for 2 workers = 501.14 s in processing of first 69451 elements of Data
 Total processing time for 3 workers = 342.61 s in processing of first 69451 elements of Data
@@ -61,6 +73,8 @@ Total processing time for 7 workers = 227.52 s in processing of first 69451 elem
 Total processing time for 8 workers = 206.81 s in processing of first 69451 elements of Data
 
 Processing hour: 2
+
+Processing 69451 elements of Data
 Total processing time for 1 workers = 919.11 s in processing of first 69451 elements of Data
 Total processing time for 2 workers = 511.95 s in processing of first 69451 elements of Data
 Total processing time for 3 workers = 344.41 s in processing of first 69451 elements of Data
@@ -71,6 +85,8 @@ Total processing time for 7 workers = 241.38 s in processing of first 69451 elem
 Total processing time for 8 workers = 210.48 s in processing of first 69451 elements of Data
 
 Processing hour: 3
+
+Processing 69451 elements of Data
 Total processing time for 1 workers = 925.80 s in processing of first 69451 elements of Data
 Total processing time for 2 workers = 510.16 s in processing of first 69451 elements of Data
 Total processing time for 3 workers = 354.93 s in processing of first 69451 elements of Data
@@ -81,6 +97,8 @@ Total processing time for 7 workers = 221.51 s in processing of first 69451 elem
 Total processing time for 8 workers = 212.02 s in processing of first 69451 elements of Data
 
 Processing hour: 4
+
+Processing 69451 elements of Data
 Total processing time for 1 workers = 924.16 s in processing of first 69451 elements of Data
 Total processing time for 2 workers = 498.26 s in processing of first 69451 elements of Data
 Total processing time for 3 workers = 342.28 s in processing of first 69451 elements of Data
@@ -90,4 +108,104 @@ Total processing time for 6 workers = 231.16 s in processing of first 69451 elem
 Total processing time for 7 workers = 221.09 s in processing of first 69451 elements of Data
 Total processing time for 8 workers = 227.43 s in processing of first 69451 elements of Data
 
-Test recorded on: 05-Apr-2021 20:26:27
+Test recorded on: 05-Apr-2021 03:49:01
+Processing hour: 1
+
+Processing 277804 elements of Data
+Total processing time for 1 workers = 3374.57 s in processing of first 277804 elements of Data
+Total processing time for 2 workers = 1885.62 s in processing of first 277804 elements of Data
+Total processing time for 3 workers = 1334.55 s in processing of first 277804 elements of Data
+Total processing time for 4 workers = 1181.63 s in processing of first 277804 elements of Data
+Total processing time for 5 workers = 1128.47 s in processing of first 277804 elements of Data
+Total processing time for 6 workers = 1063.02 s in processing of first 277804 elements of Data
+Total processing time for 7 workers = 999.77 s in processing of first 277804 elements of Data
+Total processing time for 8 workers = 951.57 s in processing of first 277804 elements of Data
+
+Processing hour: 2
+
+Processing 277804 elements of Data
+Total processing time for 1 workers = 3680.57 s in processing of first 277804 elements of Data
+Total processing time for 2 workers = 2059.57 s in processing of first 277804 elements of Data
+Total processing time for 3 workers = 1457.54 s in processing of first 277804 elements of Data
+Total processing time for 4 workers = 1163.90 s in processing of first 277804 elements of Data
+Total processing time for 5 workers = 925.00 s in processing of first 277804 elements of Data
+Total processing time for 6 workers = 917.26 s in processing of first 277804 elements of Data
+Total processing time for 7 workers = 813.29 s in processing of first 277804 elements of Data
+Total processing time for 8 workers = 800.63 s in processing of first 277804 elements of Data
+
+Processing hour: 3
+
+Processing 277804 elements of Data
+Total processing time for 1 workers = 3347.40 s in processing of first 277804 elements of Data
+Total processing time for 2 workers = 1782.80 s in processing of first 277804 elements of Data
+Total processing time for 3 workers = 1248.71 s in processing of first 277804 elements of Data
+Total processing time for 4 workers = 987.47 s in processing of first 277804 elements of Data
+Total processing time for 5 workers = 1127.45 s in processing of first 277804 elements of Data
+Total processing time for 6 workers = 946.53 s in processing of first 277804 elements of Data
+Total processing time for 7 workers = 977.06 s in processing of first 277804 elements of Data
+Total processing time for 8 workers = 888.78 s in processing of first 277804 elements of Data
+
+Using my computer
+Test recorded on: 15-Apr-2021 18:01:01
+Processing hour: 1
+
+Processing 10000 elements of Data
+Total processing time for 1 workers = 347.71 s in processing of first 10000 elements of Data
+Total processing time for 2 workers = 178.97 s in processing of first 10000 elements of Data
+Total processing time for 3 workers = 120.13 s in processing of first 10000 elements of Data
+Total processing time for 4 workers = 119.20 s in processing of first 10000 elements of Data
+
+Using MATLABONLINE
+Test recorded on: 15-Apr-2021 17:25:51
+Processing hour: 1
+
+Processing 10000 elements of Data
+Total processing time for 1 workers = 127.13 s in processing of first 10000 elements of Data
+Total processing time for 2 workers = 66.79 s in processing of first 10000 elements of Data
+Total processing time for 3 workers = 47.49 s in processing of first 10000 elements of Data
+Total processing time for 4 workers = 42.55 s in processing of first 10000 elements of Data
+
+Test recorded on: 21-Apr-2021 02:31:35
+Processing hour: 1
+
+Processing 199 elements of Data
+Total processing time for 1 workers = 2.64 s in processing of first 199 elements of Data
+Total processing time for 2 workers = 1.26 s in processing of first 199 elements of Data
+Total processing time for 3 workers = 1.31 s in processing of first 199 elements of Data
+Total processing time for 4 workers = 1.08 s in processing of first 199 elements of Data
+Total processing time for 5 workers = 1.24 s in processing of first 199 elements of Data
+Total processing time for 6 workers = 1.35 s in processing of first 199 elements of Data
+Total processing time for 7 workers = 1.46 s in processing of first 199 elements of Data
+Total processing time for 8 workers = 1.61 s in processing of first 199 elements of Data
+
+Processing 1396 elements of Data
+Total processing time for 1 workers = 13.84 s in processing of first 1396 elements of Data
+Total processing time for 2 workers = 7.79 s in processing of first 1396 elements of Data
+Total processing time for 3 workers = 6.79 s in processing of first 1396 elements of Data
+Total processing time for 4 workers = 5.39 s in processing of first 1396 elements of Data
+Total processing time for 5 workers = 5.68 s in processing of first 1396 elements of Data
+Total processing time for 6 workers = 5.79 s in processing of first 1396 elements of Data
+Total processing time for 7 workers = 6.87 s in processing of first 1396 elements of Data
+Total processing time for 8 workers = 6.51 s in processing of first 1396 elements of Data
+
+Processing hour: 2
+
+Processing 199 elements of Data
+Total processing time for 1 workers = 1.83 s in processing of first 199 elements of Data
+Total processing time for 2 workers = 1.20 s in processing of first 199 elements of Data
+Total processing time for 3 workers = 1.32 s in processing of first 199 elements of Data
+Total processing time for 4 workers = 1.18 s in processing of first 199 elements of Data
+Total processing time for 5 workers = 1.42 s in processing of first 199 elements of Data
+Total processing time for 6 workers = 1.48 s in processing of first 199 elements of Data
+Total processing time for 7 workers = 1.60 s in processing of first 199 elements of Data
+Total processing time for 8 workers = 1.84 s in processing of first 199 elements of Data
+
+Processing 1396 elements of Data
+Total processing time for 1 workers = 13.90 s in processing of first 1396 elements of Data
+Total processing time for 2 workers = 7.52 s in processing of first 1396 elements of Data
+Total processing time for 3 workers = 5.61 s in processing of first 1396 elements of Data
+Total processing time for 4 workers = 6.82 s in processing of first 1396 elements of Data
+Total processing time for 5 workers = 6.21 s in processing of first 1396 elements of Data
+Total processing time for 6 workers = 7.03 s in processing of first 1396 elements of Data
+Total processing time for 7 workers = 7.30 s in processing of first 1396 elements of Data
+Total processing time for 8 workers = 8.56 s in processing of first 1396 elements of Data

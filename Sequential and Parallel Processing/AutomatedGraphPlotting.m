@@ -14,7 +14,7 @@ if numel(ElementsToGoThrough) == 1
     title('Processing time vs number of processors')
     %Here the data is used from x1vals and y1Vals to plot a graph
     %%Secound data entred processed and used below
-else
+elseif numel(ElementsToGoThrough) == 2
     str2 = string(ElementsToGoThrough(2));
 
     Data1 = append('Data ',str1);
