@@ -10,8 +10,8 @@ close all
 LogID = fopen('AnalysisLog.txt', 'a');
 fprintf(LogID,'Test recorded on: %s', datestr(now, 0)); %recording the date and time of the test.
 
-ElementsToGoThrough = [1]; % The size of data to process
-ProcessorsToProcessFrom = [1]; % The number of processors used
+ElementsToGoThrough = [5000]; % The size of data to process
+ProcessorsToProcessFrom = [1,2,3,4,5,6,7,8]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
 i = 1;
 %% 0.1 Initilizing the values before making a graph
@@ -25,7 +25,7 @@ FileName = '../Model/o3_surface_20180701000000.nc'; % file to process
 %% Creating Errors
 
 %Text errors
-CreateTestData_Text(FileName)
+%CreateTestData_Text(FileName)
 %'../Model/TestFileText.nc' is the file with text error data
 
 %NaN errors
@@ -130,10 +130,7 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
         
         %% 10: Reshape ensemble values to Lat, lon, hour format
         % Prints results and appends them to Log book 
-        ReshapingAndResults(PoolSize, T3, LogID, SelectedElement, EnsembleVectorPar);
-        
-        
-     
+        ReshapingAndResults(PoolSize, T3, LogID, SelectedElement, EnsembleVectorPar, Data2Process);
         
         %% Appeding value's to y1VAl and y2Val.
         if idxTime == 1
@@ -149,6 +146,6 @@ fprintf(LogID,'\n');
 fclose(LogID);
 
 %% Graph Plotting
-AutomatedGraphPlotting(x1Vals, y1Vals,x2Vals,y2Vals, ElementsToGoThrough)
+AutomatedGraphPlotting(x1Vals, y1Vals,x2Vals,y2Vals, ElementsToGoThrough, ProcessorsToProcessFrom)
 
 end % end function

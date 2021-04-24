@@ -27,8 +27,8 @@ legend('69,451 Data')
 
 % %% 69,451 data processed
 x2Vals = [4, 5, 6, 7, 8];
-y12Vals = [270, 245, 236, 221, 212];
-figure('Name','1.1','Color','white')
+y1point1Vals = [270, 245, 236, 221, 212];
+figure(11)
 tiledlayout(2,2)
 yyaxis left
 nexttile
@@ -39,7 +39,7 @@ ylabel('Processing time (s)')
 title('Processing time vs number of processors')
 legend('69,451 Data')
 nexttile
-plot(x2Vals, y12Vals, '-rd')
+plot(x2Vals, y1point1Vals, '-rd')
 grid on; 
 xlabel('Number of Processors')
 ylabel('Processing time (s)')
@@ -64,13 +64,29 @@ legend('277,804 Data')
 % %% 69,451 * 4 * 25 data processed
 y3Vals = [27000, 24500, 23600, 22100, 21200];
 figure(3)
+tiledlayout(2,2)
 yyaxis left
+nexttile
 plot(x2Vals, y3Vals, '-bd')
 grid on; 
 xlabel('Number of Processors')
 ylabel('Processing time (s)')
 title('Processing time vs number of processors')
 legend('6,945,100 (69,451 * 4 * 25) Data')
+
+% %% 69,451 * 4 * 25 used to predict required processor
+nexttile
+x = 1:20;
+yfit = -1400*x + 3.208e+04;
+plot(x2Vals, y3Vals, '-bd')
+hold on;
+plot(x,yfit,'r-.');
+grid on; 
+xlabel('Number of Processors')
+ylabel('Processing time (s)')
+title('Processing time vs number of processors')
+legend('Recomended processors')
+hold off
 
 % %% 69,451 * 4 data processed vs 277,804
 y4Vals = [3700,2040,1416,1080, 980, 944, 884, 848];
@@ -152,22 +168,4 @@ ylabel('Processing time (s)')
 title('Processed using MATLAB online','Processing time vs number of processors')
 legend('10000 Data')
 
-
-% % figure(8)
-% % Poly = polyfit(x2Vals,y2Vals,1); 
-% % Poly2 = polyval(Poly,x2Vals);
-% % plot(x2Vals, y2Vals, x2Vals, Poly2)
-% %  colors = [0.8157 0.1255 0.5647  % Adds RGB colours
-% %               0.1843 0.3098 0.3098
-% %                ];
-% % colororder(colors)  % The Order for the colours is decided
-% % plot(x2Vals,y2Vals,x2Vals, Poly2, 'lineWidth',2); % plots the data 
-% % grid on; 
-% % hold on
-% % title("Processing time vs number of processors"); 
-% % legend('Location','northwest'); 
-% % 
-% % xlabel('Number of Processors'); 
-% % ylabel('Processing time (s)'); 
-% % legend('Our values','Average'); 
 

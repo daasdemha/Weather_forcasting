@@ -1,4 +1,4 @@
-Test recorded on: 22-Apr-2021 03:49:13
+Test recorded on: 24-Apr-2021 02:28:21
 
 Testing for Text
 Text variables present in ../Model/TestFileText.nc
