@@ -18,7 +18,6 @@ i = 1;
 %The data entred in x1vals and y1Vals will be used to plot a graph.
 %The data will only include the only first two processor sizes.
 x1Vals = ProcessorsToProcessFrom;
-x2Vals = ProcessorsToProcessFrom;
 y1Vals = [];
 y2Vals = [];
 FileName = '../Model/o3_surface_20180701000000.nc'; % file to process
@@ -44,8 +43,8 @@ NaNFilesToBeTested = {'../Model/TestFileNaN.nc', FileName};
 
 FilesToBeTested9999 = {'../Model/TestFile9999.nc', FileName};
 
-%function to test for text and NaN errors.
-[SkipHours9999, SkipHoursNaN] = AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested, FilesToBeTested9999);
+%function to test for text, NaN and -9999 errors.
+[SkipHours9999, SkipHoursNaN] = AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested, FilesToBeTested9999, FileName);
 %% 1: Load Data
 Contents = ncinfo(FileName);
 Lat = ncread(FileName, 'lat');
@@ -137,8 +136,8 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
           [y1Vals, y2Vals] = YaxisConstruct(ElementsToGoThrough,SelectedElement, T3, y1Vals, y2Vals);
         end
     
-    end %end of Selected Element Loop
     end %end of Processor Loop
+    end %end of Selected Element Loop
     i = i + 1;
 end %end of time loop
 
@@ -146,6 +145,6 @@ fprintf(LogID,'\n');
 fclose(LogID);
 
 %% Graph Plotting
-AutomatedGraphPlotting(x1Vals, y1Vals,x2Vals,y2Vals, ElementsToGoThrough, ProcessorsToProcessFrom)
+AutomatedGraphPlotting(x1Vals,y1Vals,y2Vals, ElementsToGoThrough, ProcessorsToProcessFrom, Data2Process)
 
 end % end function

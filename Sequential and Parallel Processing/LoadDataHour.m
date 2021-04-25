@@ -8,7 +8,7 @@ function [HourlyData] = LoadDataHour(FileName, Contents,StartLon, StartLat, idxT
 % along each data dimension, so the total number of Lat, the total
 % number of Lon, but only 1 hour.
 % You can use these values to select a smaller sub-set of the data if
-% required to speed up testing o fthe functionality.
+% required to speed up testing of the functionality.
 
 DataLayer = 1;
 for idx = [1, 2, 4, 5, 6, 7, 8]

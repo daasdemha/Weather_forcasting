@@ -1,7 +1,7 @@
 %% Script to examine NetCDF data formats and check for NaN
 % Note, you would carry out this test each time you load data.
 % You should NOT test the whole file at the start
-function [SkipHours9999] =  Test9999(LogID2, DataFileName)% define our test file as function
+function [SkipHours9999] =  Test9999(LogID2,FileName, DataFileName)% define our test file as function
 fprintf(LogID2,'Testing file %s', DataFileName);
 fprintf(LogID2,'\n');
 %% Test File with Errors
@@ -34,7 +34,7 @@ for idxHour = 1:25
         fprintf(LogID2,'\n');
         
         %% to remove the hour the error occured from the main code
-        if strcmp(DataFileName,'../Model/o3_surface_20180701000000.nc')
+        if strcmp(DataFileName,FileName)
             SkipHours9999(end+1) = idxHour;
         end
     else

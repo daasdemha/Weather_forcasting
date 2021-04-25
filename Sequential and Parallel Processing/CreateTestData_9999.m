@@ -6,7 +6,7 @@ C = ncinfo(NewFileName);
 ModelNames = {C.Variables(1:8).Name};
 
 
-%% Change data to NaN
+%% Change data to NaNq
 BadData = [700,400,-9999];
 
 %% Write to *.nc file
