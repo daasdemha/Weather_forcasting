@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-19" view-index="0" gantt-divider-location="368" resource-divider-location="300" version="2.8.11" locale="en_GB">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="196" order="0"/>
+        <field id="tpd4" name="Begin date" width="77" order="1"/>
+        <field id="tpd5" name="End date" width="76" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Week 1 - Module Introduction and Project Planning" color="#8cb6ce" meeting="false" start="2021-01-21" duration="19" complete="0" thirdDate="2021-01-28" thirdDate-constraint="0" expand="true">
+            <task id="86" name="Lecture 1 - Attend Lecture 0 and 1" color="#8cb6ce" meeting="false" start="2021-01-21" duration="1" complete="0" thirdDate="2021-01-22" thirdDate-constraint="0" expand="true"/>
+            <task id="68" name="Github and Matlab set up" color="#8cb6ce" meeting="false" start="2021-02-16" duration="1" complete="0" thirdDate="2021-01-26" thirdDate-constraint="0" expand="true"/>
+            <task id="88" name="Gantt Charts - Setup and Start" color="#8cb6ce" meeting="false" start="2021-01-22" duration="3" complete="0" thirdDate="2021-01-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="6" name="Week 2 - Big Data and Memory Constraints" color="#8cb6ce" meeting="false" start="2021-01-28" duration="14" complete="0" thirdDate="2021-01-28" thirdDate-constraint="0" expand="true">
+            <task id="91" name="Lecture 2 - Attend Lecture" color="#8cb6ce" meeting="false" start="2021-01-28" duration="1" complete="0" thirdDate="2021-01-11" thirdDate-constraint="0" expand="true"/>
+            <task id="100" name="Memory Constraints Task" color="#8cb6ce" meeting="false" start="2021-02-16" duration="1" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true">
+                <depend id="204" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="8" name="Week 3 - Parallel Processing" color="#8cb6ce" meeting="false" start="2021-02-04" duration="28" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <task id="125" name="Lecture 3 - Attend Lecture" color="#8cb6ce" meeting="false" start="2021-02-04" duration="1" complete="0" thirdDate="2021-02-16" thirdDate-constraint="0" expand="true"/>
+            <task id="103" name="Parallel and sequential processing task" color="#8cb6ce" meeting="false" start="2021-03-15" duration="1" complete="0" thirdDate="2021-01-28" thirdDate-constraint="0" expand="true">
+                <depend id="160" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="9" name="Week 4 - Code Planning" color="#8cb6ce" meeting="false" start="2021-02-11" duration="26" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <task id="129" name="Lecture 4 - Attend Lecture" color="#8cb6ce" meeting="false" start="2021-02-11" duration="1" complete="0" thirdDate="2021-02-19" thirdDate-constraint="0" expand="true"/>
+            <task id="131" name="Make flow charts" color="#8cb6ce" meeting="false" start="2021-03-16" duration="3" complete="0" thirdDate="2021-02-19" thirdDate-constraint="0" expand="true">
+                <depend id="213" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="15" name="Week 5 - Specifications and SMART Targets" color="#8cb6ce" meeting="false" start="2021-02-18" duration="1" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <depend id="189" type="2" difference="0" hardness="Strong"/>
+            <task id="140" name="Lecture 5 - Attend Lecture" color="#8cb6ce" meeting="false" start="2021-02-18" duration="1" complete="0" thirdDate="2021-03-02" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="16" name="Week 6 - Testing and Automated Testing" color="#8cb6ce" meeting="false" start="2021-02-25" duration="17" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <depend id="160" type="2" difference="0" hardness="Strong"/>
+            <task id="142" name="Lecture 6 - Attend Lecture" color="#8cb6ce" meeting="false" start="2021-02-25" duration="1" complete="0" thirdDate="2021-03-02" thirdDate-constraint="0" expand="true"/>
+            <task id="145" name="Try to do automated testing" color="#8cb6ce" meeting="false" start="2021-03-19" duration="1" complete="0" thirdDate="2021-03-02" thirdDate-constraint="0" expand="true">
+                <depend id="204" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="160" name="Make project prototype" color="#8cb6ce" meeting="false" start="2021-03-22" duration="2" complete="0" thirdDate="2021-03-08" thirdDate-constraint="0" priority="2" expand="true">
+            <depend id="170" type="2" difference="0" hardness="Strong"/>
+            <depend id="190" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="17" name="Week 7 - Project and Assessment Introduction" color="#8cb6ce" meeting="false" start="2021-03-04" duration="1" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <task id="150" name="Lecture 7 -  Attend Lecture" color="#8cb6ce" meeting="false" start="2021-03-04" duration="1" complete="0" thirdDate="2021-03-02" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="18" name="Week 8 -12 - Project and assessment work, tutorial sessions for guidance." color="#8cb6ce" meeting="false" start="2021-03-18" duration="1" complete="0" thirdDate="2021-01-20" thirdDate-constraint="0" expand="true">
+            <task id="156" name="Attend Lecture" color="#8cb6ce" meeting="false" start="2021-03-18" duration="1" complete="0" thirdDate="2021-03-02" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="170" name="Automated testing proto type" color="#8cb6ce" meeting="false" start="2021-03-24" duration="4" complete="0" thirdDate="2021-03-15" thirdDate-constraint="0" expand="true">
+            <depend id="190" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="190" name="Finish Viva" color="#8cb6ce" meeting="false" start="2021-03-30" duration="14" complete="0" thirdDate="2021-04-14" thirdDate-constraint="0" expand="true">
+            <depend id="178" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="178" name="Finish tasks" color="#8cb6ce" meeting="false" start="2021-04-19" duration="9" complete="0" thirdDate="2021-03-15" thirdDate-constraint="0" expand="true">
+            <task id="213" name="Make better Flow charts" color="#8cb6ce" meeting="false" start="2021-04-19" duration="1" complete="0" thirdDate="2021-04-09" thirdDate-constraint="0" expand="true">
+                <depend id="204" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="204" name="Automate everything" color="#8cb6ce" meeting="false" start="2021-04-20" duration="6" complete="0" thirdDate="2021-04-06" thirdDate-constraint="0" expand="true">
+                <depend id="189" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="189" name="Finish report" color="#8cb6ce" meeting="false" start="2021-04-28" duration="2" complete="0" thirdDate="2021-04-13" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="69" name="Week 13 - Submission" color="#8cb6ce" meeting="true" start="2021-04-30" duration="0" complete="0" thirdDate="2021-01-26" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
