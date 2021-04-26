@@ -10,8 +10,8 @@ close all
 LogID = fopen('AnalysisLog.txt', 'a');
 fprintf(LogID,'Test recorded on: %s', datestr(now, 0)); %recording the date and time of the test.
 
-ElementsToGoThrough = [5000]; % The size of data to process
-ProcessorsToProcessFrom = [1,2,3,4,5,6,7,8]; % The number of processors used
+ElementsToGoThrough = [500,200]; % The size of data to process
+ProcessorsToProcessFrom = [1,2,3]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
 i = 1;
 %% 0.1 Initilizing the values before making a graph

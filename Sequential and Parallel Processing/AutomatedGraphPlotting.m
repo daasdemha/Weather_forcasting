@@ -36,6 +36,9 @@ elseif numel(ElementsToGoThrough) == 1 && numel(ProcessorsToProcessFrom) > 1
     figure(2)
     YaxisAndXaxisAutoConstruct(x1Vals,Totaly1Vals,TotalData)
     
+    figure(3)
+    YaxisAndXaxisSequentialVsParallel(x1Vals,Totaly1Vals)
+    
 %% Ploting graph for given data and total data if two datasets are used and the processors are more then one
 elseif numel(ProcessorsToProcessFrom) > 1 && numel(ElementsToGoThrough) == 2
     Data2 = append('Data ',string(ElementsToGoThrough(2)));
@@ -56,6 +59,9 @@ elseif numel(ProcessorsToProcessFrom) > 1 && numel(ElementsToGoThrough) == 2
     
     figure(5)
     YaxisAndXaxisMeanProcessingTime(x1Vals,Totaly1Vals,Totaly2Vals,TotalDataNum,TotalDataNum,TotalData,TotalData)
+    
+    figure(6)
+    YaxisAndXaxisSequentialVsParallel(x1Vals,Totaly1Vals)
   
 end
 end
