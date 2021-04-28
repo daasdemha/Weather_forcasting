@@ -1,4 +1,5 @@
-function  YaxisAndXaxisScaleUp(xVals,yVals,yVals2,legendtitle,legendtitle2)    
+function  YaxisAndXaxisScaleUp(xVals,yVals,yVals2,legendtitle,legendtitle2)  
+%% Plotting original values with fully scaled up values (scaled up to the total data)
 tiledlayout(2,2)
 yyaxis left
 nexttile

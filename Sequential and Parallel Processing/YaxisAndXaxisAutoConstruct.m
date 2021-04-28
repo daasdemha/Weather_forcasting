@@ -1,4 +1,5 @@
 function  YaxisAndXaxisAutoConstruct(xVals,TotalVals,legendtitle)
+%% constructing a plot to determine the required processors needed.
 i = 1;
 x = [];
 yyaxis left
@@ -13,7 +14,7 @@ end
 end
 yfit = P(1)*x+P(2);
 hold on;
-plot(x,yfit,'r-.');
+plot(x,yfit,'r.-.');
 text(x(end), yfit(end),'Required processors \rightarrow', ...
  'HorizontalAlignment', 'right', 'Color', 'red', 'FontName', 'Times')
 xlabel('Number of Processors')

@@ -1,5 +1,5 @@
 function  YaxisAndXaxisMeanProcessingTime(xVals,yVals,yVals2,DataVal1,DataVal2,legendtitle,legendtitle2)
-
+%% Mean processing time
 y1MeanVals = yVals / DataVal1;
 y2MeanVals = yVals2 / DataVal2;
 

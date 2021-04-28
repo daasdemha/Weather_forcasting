@@ -1,12 +1,12 @@
 function CreateTestData_9999(OriginalFileName, NewFileName)
-%% Replaces one hours worth of data with NaN
+%% Replaces one hours worth of data with -9999
 copyfile(OriginalFileName, NewFileName);
 
 C = ncinfo(NewFileName);
 ModelNames = {C.Variables(1:8).Name};
 
 
-%% Change data to NaNq
+%% Change data to -9999
 BadData = [700,400,-9999];
 
 %% Write to *.nc file

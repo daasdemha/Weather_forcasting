@@ -1,4 +1,4 @@
-%% Script to examine NetCDF data formats and check for NaN
+%% Script to examine NetCDF data formats and check for -9999
 % Note, you would carry out this test each time you load data.
 % You should NOT test the whole file at the start
 function [SkipHours9999] =  Test9999(LogID2,FileName, DataFileName)% define our test file as function

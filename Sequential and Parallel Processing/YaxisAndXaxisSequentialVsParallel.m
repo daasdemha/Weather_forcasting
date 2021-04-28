@@ -1,4 +1,5 @@
 function  YaxisAndXaxisSequentialVsParallel(xVals,TotalVals)
+%% plot to compare sequential and parallel processing
 yyaxis left
 bar(xVals(1), TotalVals(1), 'b')
 hold on;

@@ -13,35 +13,35 @@ fprintf(LogID,'Test recorded on: %s', datestr(now, 0)); %recording the date and 
 ElementsToGoThrough = [500,200]; % The size of data to process
 ProcessorsToProcessFrom = [1,2,3]; % The number of processors used
 HoursToProcess = 1; %how many hours worth of data we would like to process
-i = 1;
+i = 1; % i is used to skip the hour where NaN or -9999 errors occur
 %% 0.1 Initilizing the values before making a graph
 %The data entred in x1vals and y1Vals will be used to plot a graph.
 %The data will only include the only first two processor sizes.
-x1Vals = ProcessorsToProcessFrom;
-y1Vals = [];
-y2Vals = [];
+x1Vals = ProcessorsToProcessFrom; % The values for the x axis
+y1Vals = []; % the values for the first y axis
+y2Vals = []; % the values for the secound y axis
 FileName = '../Model/o3_surface_20180701000000.nc'; % file to process
 %% Creating Errors
 
 %Text errors
-%CreateTestData_Text(FileName)
+%CreateTestData_Text(FileName) % to create text errors
 %'../Model/TestFileText.nc' is the file with text error data
 
 %NaN errors
-NewFileName = '../Model/TestFileNaN.nc';
-CreateTestData_NaN(FileName, NewFileName)
+NewFileName = '../Model/TestFileNaN.nc'; %File to add NaN errors
+CreateTestData_NaN(FileName, NewFileName) %adding NaN errors
 
 %-9999 errors
-NewFileName9999 = '../Model/TestFile9999.nc';
-CreateTestData_9999(FileName, NewFileName9999)
+NewFileName9999 = '../Model/TestFile9999.nc'; %File to add -9999 errors
+CreateTestData_9999(FileName, NewFileName9999) %adding -9999 errors
 
 %% Error Testing
 
-TextFilesToBeTested = {'../Model/TestFileText.nc', FileName};
+TextFilesToBeTested = {'../Model/TestFileText.nc', FileName}; % Files to be tested for text instead of numeric value error
 
-NaNFilesToBeTested = {'../Model/TestFileNaN.nc', FileName};
+NaNFilesToBeTested = {'../Model/TestFileNaN.nc', FileName};   % Files to be tested for NaN instead of numeric value error
 
-FilesToBeTested9999 = {'../Model/TestFile9999.nc', FileName};
+FilesToBeTested9999 = {'../Model/TestFile9999.nc', FileName}; % Files to be tested for -9999 instead of numeric value error
 
 %function to test for text, NaN and -9999 errors.
 [SkipHours9999, SkipHoursNaN] = AutomatedErrorTesting(TextFilesToBeTested, NaNFilesToBeTested, FilesToBeTested9999, FileName);
@@ -101,11 +101,11 @@ fprintf('\nProcessing hour number: %i from Total %i\n', idxTime, HoursToProcess)
             %% 9: The Parallel and Sequential Processing
             T4 = toc;
 
-            if numel(SkipHoursNaN)>= i 
+            if numel(SkipHoursNaN)>= i  % if the hour has a NaN value presnt skip it
                     if SkipHoursNaN(i) == idxTime
                         continue
                     end
-            elseif numel(SkipHours9999) >= i
+            elseif numel(SkipHours9999) >= i % if the hour has a -9999 value presnt skip it
                     if SkipHours9999(i) == idxTime
                         continue
                     end
